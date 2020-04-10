@@ -8,7 +8,7 @@ function Pizza(toppings, size) {
   this.cost = 0.00;
 }
 // Makes sure toppings and name is inputted
-var orderName = function(pizza) {
+var orderName = function (pizza) {
   if (pizza.name.length === 0) {
     alert("Please enter a name for this order!");
     return false;
@@ -21,12 +21,12 @@ var orderName = function(pizza) {
     }
   };
   if (pizza.size.length === 0) {
-  var reply = confirm("Please choose a pizza size");
-  if (reply === false) {
-    return false;
-  }
-};
-return true;
+    var reply = confirm("Please choose a pizza size");
+    if (reply === false) {
+      return false;
+    }
+  };
+  return true;
 };
 
 //Price for size
@@ -69,3 +69,32 @@ for (var i = 0; i < this.toppings.length; i++) {
   return this.cost = price;
 };
 
+//-Front End------------------------------------------------------------>
+
+var pizza; 
+
+$(document).ready(function () {
+  $("form#inputOrder").submit(function (event) {
+    event.preventDefult();
+    if (orderName(pizza)) {
+      alert ("Your pizza has been submitted");
+      $("span#output-title").text("Making " + pizza.orderName + "'s yumm-azing pizza!");
+      $("div#div-output").css("background-color", "lightgoldenrodyellow");
+      $("#btn-make-pizza").attr("disabled", true);
+    };
+
+    var sizeChoice = $("input:radio[name=size]:checked").val();
+    var selectedToppings = [];
+    $("input:checkbox[name=topping]:checked").each(function () {
+      pizza.selectedToppings.push($(this).val());  //-----------------------
+    });
+
+    var pizza = new Pizza(sizeChoice, selectedToppings);
+    pizza.pizzaPrice();
+
+ // When order is placed
+    $("#placeOrder").text("Your Order:" + pizza.name + "Your" + pizza.size, + "pizza with" + pizza.toppings, + "will be" + "<ul>" + pizza.cost + "</ul>" + "- Thank you for your order");
+
+
+  });
+});
