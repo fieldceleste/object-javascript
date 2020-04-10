@@ -1,10 +1,21 @@
+.container{
+  background-color: white;
+}
 .header{
-  background-image: url("https://dalehartery.files.wordpress.com/2015/06/chalkboard.jpg");
+  background-image:url(https://dalehartery.files.wordpress.com/2015/06/chalkboard.jpg);
   background-position: center;
-  height:300px;
-  font-size: 90px;
+  height:200px;
   color:white;
   font-family:Impact, fantasy;
-  
+ }
+h1{
+  font-size: 90px;
+  margin-left:20px;
 }
-
+.pizza{
+  width:300px;
+  height:300px;
+  float:right;
+  margin-top:-50px;
+  transform: rotate(20deg);
+}
