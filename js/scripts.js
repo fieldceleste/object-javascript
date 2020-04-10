@@ -71,30 +71,33 @@ for (var i = 0; i < this.toppings.length; i++) {
 
 //-Front End------------------------------------------------------------>
 
-var pizza; 
+var pizza;
 
 $(document).ready(function () {
   $("form#inputOrder").submit(function (event) {
     event.preventDefult();
-    if (orderName(pizza)) {
-      alert ("Your pizza has been submitted");
-      $("span#output-title").text("Making " + pizza.orderName + "'s yumm-azing pizza!");
-      $("div#div-output").css("background-color", "lightgoldenrodyellow");
-      $("#btn-make-pizza").attr("disabled", true);
-    };
 
+    // To display pizza toppings and size inputted
     var sizeChoice = $("input:radio[name=size]:checked").val();
     var selectedToppings = [];
     $("input:checkbox[name=topping]:checked").each(function () {
-      pizza.selectedToppings.push($(this).val());  //-----------------------
+      pizza.selectedToppings.push($(this).val());  //-----------------------?
     });
 
     var pizza = new Pizza(sizeChoice, selectedToppings);
     pizza.pizzaPrice();
+    //When order submitted
+    if (orderName(pizza)) {
+      alert("Your pizza order has been submitted");
+      $(".confirmed").css("background-color", "green");
+      $("#btn-place-order").attr("disabled", true);
+    };
+    // Outputted order results 
+    $("#placeOrder").text("Details about your order:" + pizza.name + "your" + pizza.size, + "pizza with" + "<li>" + pizza.toppings + "</li>" + "will be" + "<u>" + pizza.cost + "</u>" + "- Thank you for your order");
 
- // When order is placed
-    $("#placeOrder").text("Your Order:" + pizza.name + "Your" + pizza.size, + "pizza with" + pizza.toppings, + "will be" + "<ul>" + pizza.cost + "</ul>" + "- Thank you for your order");
-
-
+    // To make a new order
+    $("#reload").click(function () {
+      location.reload();
+    });
   });
 });

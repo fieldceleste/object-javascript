@@ -11,7 +11,7 @@ _Current Version April 10, 2020._
 |    Behaviors   |   Input      |    Output    |
 | :------------- | :----------: | -----------: |
 |Program receives a blank order | "" | "Please choose a size of pizza" |
-|User chooses pizza size with no toppings | "Large" | "Your large pizza will be- $___" |
+|User chooses pizza size with no toppings | "Large" | "You havent picked any toppings, your pizza will be gross!" |
 |User chooses pizza toppings but no size | "Pepperoni, Extra Cheese" | "Please choose pizza size" |
 |User chooses pizza size and a single topping | "Large: Pepperoni" |"Your Large pizza with Pepperoni will be-$___" |
 |User will choose  multiple toppings for thier pizza. | (checkbox selected)"cheese, ham, mushrooms"| ["Your pizza will have ham, cheese, mushroom"]|
