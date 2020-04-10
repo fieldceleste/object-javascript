@@ -1,13 +1,13 @@
 .container{
   background-image:url(https://dalehartery.files.wordpress.com/2015/06/chalkboard.jpg);
   background-color: white;
-  font-family: Impact, fantasy;
+  font-family: 'Bangers';
 }
 .header{
   background-position: center;
   height:200px;
   color:white;
-  font-family:Impact, fantasy;
+  font-family:'Bangers';
  }
 h1{
   font-size: 90px;
@@ -23,19 +23,24 @@ h1{
 .place{
   font-size: 40px;
   background-color: silver;
-  width:600px;
+  width:500px;
 }
 .order{
   font-size: 30px;
 }
 .radio{
-  margin-left:160px;
+  margin-left:100px;
   transform:scale(1.75);
   color:white;
+
 }
 .control-label{
   margin-top:60px;
-  font-family:Impact, fantasy ;
+  font-family: "bangers";
   color: red;
   font-size: 30px;
+  width:300px;
+}
+#order{
+  margin-right:30px;
 }

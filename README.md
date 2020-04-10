@@ -1,6 +1,6 @@
 # _Celeste's Pizza Parlor_
 
-#### _This is an Epicodus independent project highlighting my skills in building a sucessfully implemented object orientated javascript site. The site will be made using objects, prototypes, and constructors. The user must click on the toppings they would like as well as the size, to get the price on their pizza.   _
+#### _This is an Epicodus independent project highlighting my skills in building a sucessfully implemented object orientated javascript site. The site will be made using objects, prototypes, and constructors. The user must click on the toppings they would like as well as the size, to get the price on their pizza._
 
 _Current Version April 10, 2020._
 
