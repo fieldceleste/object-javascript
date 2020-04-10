@@ -12,7 +12,7 @@ _Current Version April 10, 2020._
 | :------------- | :----------: | -----------: |
 |Program receives a blank order | "" | "Please choose a size of pizza" |
 |User chooses pizza size with no toppings | "Large" | "Your large pizza will be- $___" |
-|User chooses pizza toppings but no size | "Pepperoni, Extra Cheese" | "Please choose a size of pizza" |
+|User chooses pizza toppings but no size | "Pepperoni, Extra Cheese" | "Please choose pizza size" |
 |User chooses pizza size and a single topping | "Large: Pepperoni" |"Your Large pizza with Pepperoni will be-$___" |
 |User will choose  multiple toppings for thier pizza. | (checkbox selected)"cheese, ham, mushrooms"| ["Your pizza will have ham, cheese, mushroom"]|
 |User will choose a pizza size| (radio button selected) "large" | ["large"]
