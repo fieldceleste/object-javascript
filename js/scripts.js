@@ -77,7 +77,7 @@ Pizza.prototype.pizzaPrice = function (size, toppings) {
 //-Front End------------------------------------------------------------>
 
 $(document).ready(function () {
-  $("#inputOrder").submit(function (event) {
+  $("#inputtedOrder").submit(function (event) {
     event.preventDefult();
 
     // To display pizza toppings and size inputted
