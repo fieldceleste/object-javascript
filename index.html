@@ -19,6 +19,8 @@
 
     <p class="place"><u>To place order use form below:</u></p>
 
+    <form id="inputtedOrder">
+
     <!--Name for order---- -->
     <div class="col-xs-4" id="name">
       <label for="name" class="control-label">
@@ -36,23 +38,23 @@
       <br>
       <div class="radio">
         <label>
-          <input type="radio" class="radio" name="size" value="Small">
+          <input type="radio" class="pizzaSize" name="size" value="Small">
           Small - $5.00
         </label>
         <br>
         <label>
-          <input type="radio" class="radio" name="size" value="Medium">
+          <input type="radio" class="pizzaSize" name="size" value="Medium">
           Medium - $10.00
         </label>
         <br>
         <label>
-          <input type="radio" class="radio" name="size" value="Large">
+          <input type="radio" class="pizzaSize" name="size" value="Large">
           Large - $15.00
         </label>
         <br>
         <label>
-          <input type="radio" class="radio" name="size" value="X-Large">
-          Extra Large - $20.00
+          <input type="radio" class="pizzaSize" name="size" value="X-Large">
+          X-Large - $20.00
         </label>
       </div>
     </div>
@@ -119,27 +121,33 @@
     <!--Order Total-->
     <div class="col-xs-4" id="total">
       <p class="details"><u>Order Details:</u></p>
+      <p id="inputtedOrder">-----</p>
       <hr>
-      <p class="total"><span id="order-total"></span>
-        <p class="total">Size: <span id="output-size"></span></p>
-        <p class="total">Toppings:</p>
-        <ul>
-          <span id="output-toppings"></span>
-        </ul>
-        <hr>
-        <p class="total">Price: $<span id="output-price"></span></p>
-        <form id="form-order">
-          <button class="btn btn-danger" type="submit" id="make-pizza">Make my Pizza!</button>
-        </form>
-        <form id="form-new">
-          <button class="btn btn-success" type="submit" id="reload">New Pizza</button>
-        </form>
+
+     
+        <button class="btn btn-danger" type="submit" id="make-pizza">Make my Pizza!</button>
+   
+     
+        <button class="btn btn-success" type="submit" id="reload">New Pizza</button>
+      </form> 
+    
     </div>
-
-
-
-
   </div>
 </body>
 
 </html>
+
+
+
+
+
+
+ <!-- <p class="total"><span id="order-total"></span>
+        <p class="total">Size: <span id="size-output"></span></p>
+        <p class="total">Toppings:</p>
+        <ul>
+          <span id="toppings-amount"></span>
+        </ul>
+        <hr>
+        <p class="total">Price: $<span id="output-price"></span></p>
+       
