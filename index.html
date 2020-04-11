@@ -1,64 +1,135 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">  
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Forum|Single+Day&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">  
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Celeste's Bombtasic Pizza</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h1>Celeste's Bombtastic Pizza</h1>
-        <img src= "img/pizza.png" alt='' class="pizza">
-      </div>
 
-      <p class="place">To place order use form below:</p>
-      <!--Name for order---- -->
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers|Forum|Single+Day&display=swap" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Celeste's Bombtasic Pizza</title>
+</head>
 
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Celeste's Bombtastic Pizza</h1>
+      <img src="img/pizza.png" alt='' class="pizza">
+    </div>
 
-      <div class="col-xs-4" id="order">
-        <label for="size" class="control-label"><p class="order">Name for your order.</p></label>
-        <input id="name" class="form-control" type="text">
-     </div>
-
-        <div class="col-xs-4" id="order">
-        <label for="size" class="control-label"><p class="order">Select your pizza size.</p></label>
-        <br>
-        <br>
-        <div class="radio">
-          <label>
-            <input type="radio" class="radio" name="size" value="Small">
-            Small - $5.00
-          </label>
-          <br>
-          <label>
-            <input type="radio" class="radio" name="size" value="Medium" checked>
-            Medium - $10.00
-          </label>
-          <br>
-          <label>
-            <input type="radio" class="radio" name="size" value="Large">
-            Large - $15.00
-          </label>
-          <br>
-          <label>
-            <input type="radio" class="radio" name="size" value="X-Large">
-            Extra Large - $20.00
-          </label>
-        </div>
-
+    <p class="place">To place order use form below:</p>
+  
+    <!--Name for order---- -->
+    <div class="col-xs-4" id="name">
+      <label for="name" class="control-label">
+        <p class="name">Name for your order.</p>
+      </label>
+      <input id="name" class="form-control" type="text">
+    </div>
 
  
-   
+    <!--Toppings-->
+
+    <div class="col-lg-2" id="toppings">
+
+      <label for="toppings" class="control-label">
+        <p class="toppings">Select your toppings</p>
+      </label>
+      <p class="charge">(All toppings $.25)</p>
+      <hr>
+      <div class=checkbox>
+        <h4>Cheeseeeee-</h4>
+        <label class="checkbox">
+          <input type="checkbox" name="toppings" value="">
+          Famous Cheese Blend
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="toppings" value="">
+          Ricotta cheese
+        </label>
+        <hr>
+        <div class=checkbox>
+          <h4>Meattttt-</h4>
+          <label class="checkbox">
+            <input type="checkbox" name="toppings" value="">
+            Ham
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="toppings" value="">
+            Chicken
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="toppings" value="">
+            Pepperoni
+          </label>
+          <hr>
+          <div class=checkbox>
+            <h4>Extrasssss-</h4>
+            <label class="checkbox">
+              <input type="checkbox" name="toppings" value="">
+              Pinapple
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="toppings" value="">
+              Grilled Onion
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="toppings" value="">
+              Pepper Blend
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="toppings" value="">
+              Mushrooms
+            </label>
+          </div>
+          <!--End topings-->
+ <!--Pizza Size-->
+ <div class="col-xs-4" id="size">
+  <label for="size" class="control-label">
+    <p class="size">Select your pizza size</p>
+  </label>
+  <br>
+  <br>
+  <div class="radio">
+    <label>
+      <input type="radio" class="radio" name="size" value="Small">
+      Small - $5.00
+    </label>
+    <br>
+    <label>
+      <input type="radio" class="radio" name="size" value="Medium">
+      Medium - $10.00
+    </label>
+    <br>
+    <label>
+      <input type="radio" class="radio" name="size" value="Large">
+      Large - $15.00
+    </label>
+    <br>
+    <label>
+      <input type="radio" class="radio" name="size" value="X-Large">
+      Extra Large - $20.00
+    </label>
+  </div>
+          <!--Order Total-->
+  <div class="col-xs-12" id="total">
+    <p class="total"><span id="output-title"></span></h3>
+      <p>Size: <span id="output-size"></span></p>
+      <p>Toppings:</p>
+      <ul>
+        <span id="output-toppings"></span>
+      </ul>
+      <hr>
+      <p>Price: $<span id="output-price"></span></p>
+      <form id="form-order">
+        <button class="btn btn-danger" type="submit" id="btn-make-pizza">Make my Pizza!</button>
+      </form>
+  </div>
+
+          
 
 
-
-
-
-
-</div>
+          </div>
 </body>
+
 </html>
