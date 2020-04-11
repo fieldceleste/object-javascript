@@ -64,3 +64,24 @@ h4{
  font-size: 25px;
  color:white;
 }
+.total{
+  font-size: 25px;
+  color: #f00;
+}
+.btn{
+  width:200px;
+  height:50px;
+  font-size:20px;
+}
+#output-price{
+  font-size: 20px;
+  color:rgb(224, 184, 5);
+}
+#output-size{
+  font-size: 20px;
+  color:rgb(224, 184, 5);
+}
+.details{
+  font-size: 35px;
+  color: #f00;
+}
