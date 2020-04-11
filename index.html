@@ -18,43 +18,43 @@
     </div>
 
     <p class="place"><u>To place order use form below:</u></p>
-  
+
     <!--Name for order---- -->
     <div class="col-xs-4" id="name">
       <label for="name" class="control-label">
         <p class="name">Name for your order</p>
       </label>
       <input id="name" class="form-control" type="text">
-    <!-- </div> -->
 
-  <!--Pizza Size-->
-  <!-- <div class="col-xs-4" id="size"> -->
-    <label for="size" class="control-label">
-      <p class="size">Select your pizza size</p>
-    </label>
-    <br>
-    <br>
-    <div class="radio">
-      <label>
-        <input type="radio" class="radio" name="size" value="Small">
-        Small - $5.00
+
+      <!--Pizza Size-->
+
+      <label for="size" class="control-label">
+        <p class="size">Select your pizza size</p>
       </label>
       <br>
-      <label>
-        <input type="radio" class="radio" name="size" value="Medium">
-        Medium - $10.00
-      </label>
       <br>
-      <label>
-        <input type="radio" class="radio" name="size" value="Large">
-        Large - $15.00
-      </label>
-      <br>
-      <label>
-        <input type="radio" class="radio" name="size" value="X-Large">
-        Extra Large - $20.00
-      </label>
-    </div>
+      <div class="radio">
+        <label>
+          <input type="radio" class="radio" name="size" value="Small">
+          Small - $5.00
+        </label>
+        <br>
+        <label>
+          <input type="radio" class="radio" name="size" value="Medium">
+          Medium - $10.00
+        </label>
+        <br>
+        <label>
+          <input type="radio" class="radio" name="size" value="Large">
+          Large - $15.00
+        </label>
+        <br>
+        <label>
+          <input type="radio" class="radio" name="size" value="X-Large">
+          Extra Large - $20.00
+        </label>
+      </div>
     </div>
 
     <!--Toppings-->
@@ -111,32 +111,35 @@
               Mushrooms
             </label>
           </div>
-          </div>
-          </div>
-          </div>
-          <!--End topings-->
+        </div>
+      </div>
+    </div>
+    <!--End topings-->
 
-          <!--Order Total-->
-  <div class="col-xs-4" id="total">
-    <p class="details"><u>Order Details:</u></p>
-    <hr>
-    <p class="total"><span id="order-total"></span>
-      <p class="total">Size: <span id="output-size"></span></p>
-      <p class="total">Toppings:</p>
-      <ul>
-        <span id="output-toppings"></span>
-      </ul>
+    <!--Order Total-->
+    <div class="col-xs-4" id="total">
+      <p class="details"><u>Order Details:</u></p>
       <hr>
-      <p class="total">Price: $<span id="output-price"></span></p>
-      <form id="form-order">
-        <button class="btn btn-danger" type="submit" id="make-pizza">Make my Pizza!</button>
-      </form>
+      <p class="total"><span id="order-total"></span>
+        <p class="total">Size: <span id="output-size"></span></p>
+        <p class="total">Toppings:</p>
+        <ul>
+          <span id="output-toppings"></span>
+        </ul>
+        <hr>
+        <p class="total">Price: $<span id="output-price"></span></p>
+        <form id="form-order">
+          <button class="btn btn-danger" type="submit" id="make-pizza">Make my Pizza!</button>
+        </form>
+        <form id="form-new">
+          <button class="btn btn-success" type="submit" id="reload">New Pizza</button>
+        </form>
+    </div>
+
+
+
+
   </div>
-
-          
-
-
-          </div>
 </body>
 
 </html>

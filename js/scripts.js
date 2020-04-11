@@ -3,7 +3,7 @@
 // object-Pizza
 function Pizza(toppings, size) {
   this.toppings = toppings,
-    this.size = size
+  this.size = size
   this.name = "";
   this.cost = 0.00;
 }
