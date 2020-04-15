@@ -39,10 +39,7 @@ h1{
   font-size: 30px;
   width:300px;
 }
-/* #size{
-  margin-left:-400px;
-  margin-top:-500px; */
-/* } */
+
 .charge{
   font-size: 20px;
   margin-top: -10px;;
@@ -84,4 +81,8 @@ h4{
 .details{
   font-size: 35px;
   color: #f00;
+}
+#inputtedOrder {
+  font-size: 20px;
+  color:white;
 }

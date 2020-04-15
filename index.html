@@ -19,119 +19,118 @@
 
     <p class="place"><u>To place order use form below:</u></p>
 
-    <form id="inputtedOrder"\>
+    <form id="inputtedOrder">
 
-    <!--Name for order---- -->
-    <div class="col-xs-4" id="name">
-      <label for="name" class="control-label">
-        <p class="name">Name for your order</p>
-      </label>
-      <input id="name" class="form-control" type="text">
+      <!-- Name for order---- -->
+      <div class="col-xs-4" id="name">
+        <label for="name" class="control-label">
+          <p class="name">Name for your order</p>
+        </label>
+        <input id="name" class="form-control" type="text">
 
 
-      <!--Pizza Size-->
+        <!--Pizza Size-->
 
-      <label for="size" class="control-label">
-        <p class="size">Select your pizza size</p>
-      </label>
-      <br>
-      <br>
-      <div class="radio">
-        <label>
-          <input type="radio" class="pizzaSize" name="size" value="Small">
-          Small - $5.00
+        <label for="size" class="control-label">
+          <p class="size">Select your pizza size</p>
         </label>
         <br>
-        <label>
-          <input type="radio" class="pizzaSize" name="size" value="Medium">
-          Medium - $10.00
-        </label>
         <br>
-        <label>
-          <input type="radio" class="pizzaSize" name="size" value="Large">
-          Large - $15.00
-        </label>
-        <br>
-        <label>
-          <input type="radio" class="pizzaSize" name="size" value="X-Large">
-          X-Large - $20.00
-        </label>
+        <div class="pizzaSizeRadioSelection">
+          <label>
+            <input type="radio" class="pizzaSize" id="pizzaSizeSmall" name="size" value="Small">
+            Small - $5.00
+          </label>
+          <br>
+          <label>
+            <input type="radio" class="pizzaSize" id="pizzaSizeMedium" name="size" value="Medium">
+            Medium - $10.00
+          </label>
+          <br>
+          <label>
+            <input type="radio" class="pizzaSize" id="pizzaSizeMedLarge" name="size" value="Large">
+            Large - $15.00
+          </label>
+          <br>
+          <label>
+            <input type="radio" class="pizzaSize" id="pizzaSizeX-Large" name="size" value="X-Large">
+            X-Large - $20.00
+          </label>
+        </div>
       </div>
-    </div>
+      <!-- </div> -->
 
-    <!--Toppings-->
+      <!--Toppings-->
 
-    <div class="col-lg-4" id="toppings">
+      <div class="col-lg-4" id="toppings">
 
-      <label for="toppings" class="control-label">
-        <p class="toppings">Select your toppings</p>
-      </label>
-      <p class="charge">(All toppings $.25)</p>
-      <hr>
-      <div class=checkbox>
-        <h4>Cheeseeeee-</h4>
-        <label class="checkbox">
-          <input type="checkbox" name="toppings" value="">
-          Famous Cheese Blend
+        <label for="toppings" class="control-label">
+          <p class="toppings">Select your toppings</p>
         </label>
-        <label class="checkbox">
-          <input type="checkbox" name="toppings" value="">
-          Ricotta cheese
-        </label>
+        <p class="charge">(All toppings $.25)</p>
         <hr>
         <div class=checkbox>
+          <h4>Cheeseeeee-</h4>
+          <label class="checkbox">
+            <input type="checkbox" name="topping" value="Famous Cheese Blend">
+            Famous Cheese Blend
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="topping" value="Ricotta cheese">
+            Ricotta cheese
+          </label>
+          <hr>
+
           <h4>Meattttt-</h4>
           <label class="checkbox">
-            <input type="checkbox" name="toppings" value="">
+            <input type="checkbox" name="topping" value="Ham">
             Ham
           </label>
           <label class="checkbox">
-            <input type="checkbox" name="toppings" value="">
+            <input type="checkbox" name="topping" value="Chicken">
             Chicken
           </label>
           <label class="checkbox">
-            <input type="checkbox" name="toppings" value="">
+            <input type="checkbox" name="topping" value="Pepperoni">
             Pepperoni
           </label>
           <hr>
-          <div class=checkbox>
-            <h4>Extrasssss-</h4>
-            <label class="checkbox">
-              <input type="checkbox" name="toppings" value="">
-              Pinapple
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" name="toppings" value="">
-              Grilled Onion
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" name="toppings" value="">
-              Pepper Blend
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" name="toppings" value="">
-              Mushrooms
-            </label>
-          </div>
+
+          <h4>Extrasssss-</h4>
+          <label class="checkbox">
+            <input type="checkbox" name="topping" value="Pinapple">
+            Pinapple
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="topping" value="Grilled Onion">
+            Grilled Onion
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="topping" value=" Pepper Blend">
+            Pepper Blend
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="topping" value="Mushrooms">
+            Mushrooms
+          </label>
         </div>
-      </div>
-    </div>
-    <!--End topings-->
 
-    <!--Order Total-->
-    <div class="col-xs-4" id="total">
-      <p class="details"><u>Order Details:</u></p>
-      <p id="inputtedOrder">-----</p>
-      <hr>
+        <!--End topings-->
 
-     
-        <button class="btn btn-danger" type="submit" id="make-pizza">Make my Pizza!</button>
+        <div class="col-xs-4" id="total">
+          
+          <button class="btn btn-danger" type="submit" id="make-pizza">Make my Pizza!</button>
+
+
+          <button class="btn btn-success" type="submit" id="reload">New Pizza</button>
    
-     
-        <button class="btn btn-success" type="submit" id="reload">New Pizza</button>
-      </form> 
-    
-    </div>
+    <!--Order Total-->
+
+    <p class="details"><u>Order Details:</u></p>
+    <p id="inputtedOrder">-----</p>
+    <hr>
+  </form>
+  </div>
   </div>
 </body>
 
@@ -142,7 +141,7 @@
 
 
 
- <!-- <p class="total"><span id="order-total"></span>
+<!-- <p class="total"><span id="order-total"></span>
         <p class="total">Size: <span id="size-output"></span></p>
         <p class="total">Toppings:</p>
         <ul>
