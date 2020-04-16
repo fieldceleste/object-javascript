@@ -14,29 +14,33 @@
   <div class="container">
     <div class="header">
       <h1>Celeste's Bombtastic Pizza!</h1>
+      <img src="img/cheese.png" alt='' class="cheese">
+
       <img src="img/pizza.png" alt='' class="pizza">
     </div>
+
 
     <p class="place"><u>To place order use form below:</u></p>
 
     <form id="inputtedOrder">
 
-      <!-- Name for order---- -->
-      <div class="col-xs-4" id="name">
-        <label for="name" class="control-label">
-          <p class="name">Name for your order</p>
+      <div class="col-xs-4" id="orderForm">
+
+        <!-- Name for order---- -->
+        <label for="nameInput" class="nameInput">
+          <p class="nameInput">Name for your order</p>
         </label>
         <input id="name" class="form-control" type="text">
 
 
         <!--Pizza Size-->
 
-        <label for="size" class="control-label">
+        <label for="size" class="pizza-size">
           <p class="size">Select your pizza size</p>
         </label>
         <br>
         <br>
-        <div class="pizzaSizeRadioSelection">
+        <div class="pizzaSize">
           <label>
             <input type="radio" class="pizzaSize" id="pizzaSizeSmall" name="size" value="Small">
             Small - $5.00
@@ -64,7 +68,7 @@
 
       <div class="col-lg-4" id="toppings">
 
-        <label for="toppings" class="control-label">
+        <label for="toppings" class="pizza-toppings">
           <p class="toppings">Select your toppings</p>
         </label>
         <p class="charge">(All toppings $.25)</p>
@@ -106,7 +110,7 @@
             Grilled Onion
           </label>
           <label class="checkbox">
-            <input type="checkbox" name="topping" value=" Pepper Blend">
+            <input type="checkbox" name="topping" value="Pepper Blend">
             Pepper Blend
           </label>
           <label class="checkbox">
@@ -114,22 +118,24 @@
             Mushrooms
           </label>
         </div>
+      </div>
 
-        <!--End topings-->
+      <!--End topings-->
 
-        <div class="col-xs-4" id="total">
-          
-          <button class="btn btn-danger" type="submit" id="make-pizza">Make my Pizza!</button>
+      <div class="col-lg-4" id="total">
+        <br>
+        <br>
+        <br>
+        <button class="btn btn-danger" type="submit" id="make-pizza">Make my Pizza!</button>
 
-
-          <button class="btn btn-success" type="submit" id="reload">New Pizza</button>
-   
+        <button class="btn btn-success" type="submit" id="reload">New Pizza</button>
+    </form>
     <!--Order Total-->
 
     <p class="details"><u>Order Details:</u></p>
-    <p id="inputtedOrder">-----</p>
+
     <hr>
-  </form>
+    <p id="inputtedOrder"></p>
   </div>
   </div>
 </body>

@@ -1,55 +1,63 @@
 // Backend Logic------------------------------------------------------>
-function Pizza (size, toppings) {
+function Pizza(size,toppings) {
   this.size = size,
-  this.toppings = toppings
+    this.toppings = toppings
+
 }
 
-Pizza.prototype.itemPrice = function() {
+Pizza.prototype.itemPrice = function () {
   var price = 0;
   if (this.size === "Small") {
-  price += 5;
-} else if (this.size === "Medium" ) {
-  price += 10;
-}  else if (this.size === "Large" ) {
-  price += 15;
- } else if (this.size === "X-Large" ) {
-  price += 20;
- }
-for (var i = 0; i < this.toppings.length; i++){
-  if(this.toppings.length === 1) {
-    price +=0.25;
-  } else if (this.toppings.length === 2) {
-    price +=0.25;
-  } else if (this.toppings.length === 3) {
-    price +=0.25;
-  }else if (this.toppings.length === 4) {
-    price +=0,25;
-  }else if (this.toppings.length === 5) {
-    price +=0.25;
+    price += 5;
+  } else if (this.size === "Medium") {
+    price += 10;
+  } else if (this.size === "Large") {
+    price += 15;
+  } else if (this.size === "X-Large") {
+    price += 20;
   }
-}
- return this.cost = price;
+  for (var i = 0; i < this.toppings.length; i++) {
+    if (this.toppings.length === 1) {
+      price += 0.25;
+    } else if (this.toppings.length === 2) {
+      price += 0.25;
+    } else if (this.toppings.length === 3) {
+      price += 0.25;
+    } else if (this.toppings.length === 4) {
+      price += 0, 25;
+    } else if (this.toppings.length === 5) {
+      price += 0.25;
+    }
+  }
+  return this.cost = price;
 };
 
 
 // user interface
-$(document).ready(function(){
-  $("form#inputtedOrder").submit(function(event) {
+$(document).ready(function () {
+  $("form#inputtedOrder").submit(function (event) {
     event.preventDefault();
-
+    var orderName = $("input#name").val();
+    $(".name").text(orderName);
     var pizzaSize = $("input:radio[name=size]:checked").val();
     var toppingsSelected = [];
-    $("input:checkbox[name=topping]:checked").each(function(){
+    $("input:checkbox[name=topping]:checked").each(function () {
       toppingsSelected.push($(this).val());
+
     });
     var pizza = new Pizza(pizzaSize, toppingsSelected);
     pizza.itemPrice();
 
-    $("#inputtedOrder").append("You have ordered a " + pizza.size + " pizza with " + pizza.toppings + " for a total of " + pizza.cost + " dollars.");
 
+    $("#inputtedOrder").append(orderName + " , you have ordered a " + pizza.size + " pizza with " + pizza.toppings + " for a total of " + "$" + pizza.cost);
+
+    $("#reload").click(function () {
+      location.reload();
+    });
     console.log(pizzaSize);
     console.log(pizza.cost);
     console.log(pizza.toppings);
+    console.log(orderName);
 
 
 
@@ -112,12 +120,7 @@ $(document).ready(function(){
 //   this.name = "";
 //   this.price = 0;
 // };
-// // // Makes sure toppings and name is inputted
-// // var orderName = function (pizza) {
-// //   if (pizza.name.length === 0) {
-// //     alert("Please enter a name for this order!");
-// //     return false;
-// //   };
+
 
 // //   if (pizza.toppings.length === 0) {
 // //     var reply = confirm("You havent picked any toppings, your pizza will be gross!");
@@ -148,7 +151,7 @@ $(document).ready(function(){
 //   }
 // }
 
- 
+
 
 
 
